@@ -1,0 +1,181 @@
+/* === General Layout === */
+.security-dashboard {
+  padding: 30px;
+  font-family: "Inter", Arial, sans-serif;
+  background-color: #f9fafc;
+  min-height: 100vh;
+  color: #333;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.dashboard-header p {
+  font-size: 1rem;
+  color: #475569;
+}
+
+/* === Hotels Section === */
+.hotel-section h2 {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.no-hotels {
+  text-align: center;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.hotel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* === Hotel Card === */
+.hotel-card {
+  text-decoration: none;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hotel-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.hotel-card-content {
+  padding: 20px;
+}
+
+.hotel-card h3 {
+  font-size: 1.25rem;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.hotel-description {
+  font-size: 0.95rem;
+  color: #475569;
+  margin-bottom: 15px;
+  min-height: 40px;
+}
+
+.hotel-info p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  color: #334155;
+}
+
+/* === States === */
+.loading,
+.error {
+  padding: 20px;
+  text-align: center;
+}
+
+.loading {
+  color: #64748b;
+}
+
+.error {
+  color: #dc2626;
+  font-weight: bold;
+}
+/* Hotel Detail Page */
+.page-container {
+  padding: 20px;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.hotel-info {
+  margin-bottom: 30px;
+}
+
+/* Guest ID Image Gallery */
+.guest-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.guest-id-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.guest-id-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.guest-id-image {
+  width: 100%;
+  height: 220px; /* Typical ID card height */
+  object-fit: contain; /* prevent cropping */
+  background-color: #f9fafb; /* subtle background behind transparent areas */
+  display: block;
+  padding: 8px;
+}
+
+/* Responsive tweak for smaller devices */
+@media (max-width: 600px) {
+  .guest-id-image {
+    height: 180px;
+  }
+}
+/* === Booking Sections === */
+.booking-section {
+  margin-bottom: 40px;
+}
+
+.booking-section h3 {
+  font-size: 1.2rem;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.guest-name {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #334155;
+  margin: 8px 0 12px;
+}
+
+.no-guests {
+  color: #94a3b8;
+  font-style: italic;
+  margin-left: 10px;
+}
