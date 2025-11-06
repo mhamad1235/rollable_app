@@ -57,6 +57,20 @@ function HotelDashboard() {
   >
     View Reservations
   </Link>
+    <Link 
+    to="/scan" 
+    className="view-reservations-btn"
+    style={{
+      padding: "10px 20px",
+      backgroundColor: "#007bff",
+      color: "white",
+      borderRadius: "8px",
+      textDecoration: "none",
+      fontWeight: "500"
+    }}
+  >
+    Scan QR Code
+  </Link>
 </div>
 
 

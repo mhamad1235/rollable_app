@@ -6,6 +6,7 @@ import SecurityDashboard from "./pages/security/Dashboard";
 import HotelReservations from "./pages/hotel/HotelReservation";
 import Login from "./pages/Login";
 import HotelDetail from "./pages/security/HotelDetail";
+import QRScanner from "./pages/QRScanner";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/hotel/reservations" element={<HotelReservations />} />
+             <Route path="/scan" element={<QRScanner />} />
             <Route path="/hotel/:id" element={<HotelDetail />} />
           <Route path="/hotel/dashboard" element={<HotelDashboard />} />
           <Route path="/security/dashboard" element={<SecurityDashboard />} />
