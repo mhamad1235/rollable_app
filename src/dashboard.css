@@ -336,3 +336,40 @@ body{
 a:focus, button:focus, .room-tile:focus { outline: 3px solid rgba(74,108,247,0.12); outline-offset:2px; border-radius:10px; }
 
 /* ---------- End of file ---------- */
+.modern-table {
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 12px rgba(0,0,0,0.08);
+}
+
+.modern-table thead {
+  background: #f1f4f9;
+}
+
+.modern-table th {
+  padding: 12px;
+  font-weight: 600;
+}
+
+.modern-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eef2f6;
+}
+
+.send-btn {
+  background: #2d79ff;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.send-btn:disabled {
+  background: gray;
+  cursor: default;
+}
+.send-btn:hover:not(:disabled) {
+  opacity: .8;
+}
