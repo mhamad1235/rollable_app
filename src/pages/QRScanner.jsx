@@ -7,11 +7,11 @@ export default function QRScanner() {
   const [scanResult, setScanResult] = useState(null);
   const [error, setError] = useState(null);
   const [hotelData, setHotelData] = useState(null);
-  const [loading, setLoading] = useState(false);
+
   const [cameraActive, setCameraActive] = useState(true);
 
   useEffect(() => {
-    console.log("Camera active:", loading);
+
     let codeReader = new BrowserMultiFormatReader();
 
     if (cameraActive) {
@@ -35,7 +35,7 @@ export default function QRScanner() {
   async function handleScan(text) {
     try {
       setScanResult(text);
-      setLoading(true);
+    
       const token = localStorage.getItem("access_token");
       const response = await axiosClient.get(`/v1/hotel/bookings/${text}`, {
         headers: { Authorization: `Bearer ${token}` },
@@ -46,7 +46,7 @@ export default function QRScanner() {
       setScanResult(null);
       setCameraActive(true);
     } finally {
-      setLoading(false);
+ 
     }
   }
 
