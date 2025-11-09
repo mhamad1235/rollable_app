@@ -11,6 +11,7 @@ export default function QRScanner() {
   const [cameraActive, setCameraActive] = useState(true);
 
   useEffect(() => {
+    console.log("Camera active:", loading);
     let codeReader = new BrowserMultiFormatReader();
 
     if (cameraActive) {
