@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axiosClient from "../../api/axiosClient";
 import "../../SecurityDashboard.css";
 import Sidebar from "../../component/Sidebar";   // <-- add this

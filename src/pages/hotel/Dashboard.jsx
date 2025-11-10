@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../../dashboard.css";
 import axiosClient from "../../api/axiosClient";
-import { Link } from "react-router-dom";
 import Sidebar from "../../component/Sidebar";   // <-- add this
 
 function HotelDashboard() {
