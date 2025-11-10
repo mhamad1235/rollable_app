@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axiosClient from "../../api/axiosClient";
 import { Link } from "react-router-dom";
 import "../../SecurityDashboard.css"; // 👈 import CSS
-
+import Sidebar from "../../component/Sidebar";   // <-- add this
 export default function SecurityDashboard() {
   const [hotels, setHotels] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -31,6 +31,11 @@ export default function SecurityDashboard() {
   if (error) return <div className="error">{error}</div>;
 
   return (
+      <div style={{ display: "flex" }}>
+    
+          <Sidebar role="security" />
+    
+          <div style={{ marginLeft: 230, padding: 30, width: "100%" }}>
     <div className="security-dashboard">
       <header className="dashboard-header">
         <h1>Security Dashboard</h1>
@@ -51,7 +56,7 @@ export default function SecurityDashboard() {
                   <div className="hotel-info">
                     <p><strong>Phone:</strong> {hotel.phone}</p>
                     <p>
-                      <strong>Lat:</strong> {hotel.latitude} | <strong>Lng:</strong> {hotel.longitude}
+                
                     </p>
                   </div>
                 </div>
@@ -60,6 +65,8 @@ export default function SecurityDashboard() {
           </div>
         )}
       </section>
+    </div>
+    </div>
     </div>
   );
 }

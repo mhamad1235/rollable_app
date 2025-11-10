@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { BrowserMultiFormatReader } from "@zxing/library";
 import axiosClient from "../api/axiosClient";
 import "../index.css";
+import Sidebar from "../component/Sidebar";   // <-- add this
 export default function QRScanner() {
   const videoRef = useRef(null);
   const [scanResult, setScanResult] = useState(null);
@@ -58,6 +59,11 @@ export default function QRScanner() {
   }
 
   return (
+     <div style={{ display: "flex" }}>
+    
+          <Sidebar role="hotel" />
+    
+          <div style={{ marginLeft: 230, padding: 30, width: "100%" }}>
     <div style={{ textAlign: "center", marginTop: "40px" }}>
       <h2>Scan QR Code</h2>
 
@@ -177,6 +183,8 @@ export default function QRScanner() {
       {!cameraActive && !hotelData && (
         <button onClick={resetScanner}>Retry Scan</button>
       )}
+    </div>
+    </div>
     </div>
   );
 }

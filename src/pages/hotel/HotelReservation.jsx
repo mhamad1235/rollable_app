@@ -4,7 +4,8 @@ import "../../dashboard.css";
 import axiosClient from "../../api/axiosClient";
 import { FaPaperPlane } from "react-icons/fa"; // send icon
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
-
+import { Link } from "react-router-dom";
+import Sidebar from "../../component/Sidebar";   // <-- add this
 function HotelReservation() {
   const [reservations, setReservations] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -90,8 +91,14 @@ function HotelReservation() {
   }
 
   return (
+       <div style={{ display: "flex" }}>
+    
+          <Sidebar role="hotel" />
+    
+          <div style={{ marginLeft: 230, padding: 30, width: "100%" }}>
     <div className="dashboard-container">
-      <h1 className="dashboard-title">Reservations</h1>
+  
+  
 
       <div className="stats-cards">
         <div className="card">
@@ -123,7 +130,7 @@ function HotelReservation() {
           <p>No reservations found.</p>
         ) : (
           <div style={{ overflowX: "auto" }}>
-            <table className="reservation-table modern-table" style={{ minWidth: 900 }}>
+            <table className="reservation-table modern-table" style={{ minWidth: 750 }}>
               <thead>
                 <tr>
                   <th>#</th>
@@ -206,6 +213,8 @@ function HotelReservation() {
           </div>
         )}
       </div>
+    </div>
+    </div>
     </div>
   );
 }

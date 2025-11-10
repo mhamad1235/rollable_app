@@ -373,3 +373,71 @@ a:focus, button:focus, .room-tile:focus { outline: 3px solid rgba(74,108,247,0.1
 .send-btn:hover:not(:disabled) {
   opacity: .8;
 }
+.center-container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  background:#f5f5f5;
+}
+
+.auth-card{
+  background:#fff;
+  padding:35px;
+  width:380px;
+  border-radius:18px;
+  box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.title{
+  font-size:26px;
+  font-weight:700;
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.auth-form .form-group{
+  margin-bottom:18px;
+}
+
+.auth-form input{
+  width:100%;
+  border:1px solid #ddd;
+  border-radius:10px;
+  padding:12px;
+  font-size:15px;
+}
+
+.submit-btn{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  font-size:16px;
+  cursor:pointer;
+  background:black;
+  color:white;
+  font-weight:600;
+}
+
+.alert.error{
+  background:#ffdddd;
+  color:#900;
+  padding:10px;
+  border-radius:10px;
+  margin-bottom:15px;
+}
+.top-action-buttons{
+  display:flex;
+  gap:14px;
+  margin-bottom:20px;
+}
+
+.primary-btn{
+  padding:10px 18px;
+  background:black;
+  color:white;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+}

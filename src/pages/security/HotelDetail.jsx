@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axiosClient from "../../api/axiosClient";
 import "../../SecurityDashboard.css";
-
+import Sidebar from "../../component/Sidebar";   // <-- add this
 export default function HotelDetail() {
   const { id } = useParams();
   const [hotel, setHotel] = useState(null);
@@ -33,16 +33,19 @@ export default function HotelDetail() {
   if (!hotel) return <p className="page-container">No hotel data found.</p>;
 
   return (
+       <div style={{ display: "flex" }}>
+        
+              <Sidebar role="security" />
+        
+              <div style={{ marginLeft: 230, padding: 30, width: "100%" }}>
     <div className="page-container">
-      <Link to="/security/dashboard" className="back-link">
-        ← Back to Dashboard
-      </Link>
+      
 
       <div className="hotel-info">
         <h1>{hotel.name}</h1>
         <p>{hotel.description}</p>
         <p><strong>Phone:</strong> {hotel.phone}</p>
-        <p><strong>Coordinates:</strong> {hotel.latitude}, {hotel.longitude}</p>
+      
       </div>
 
       <h2>Guest National ID Images</h2>
@@ -72,6 +75,8 @@ export default function HotelDetail() {
           </div>
         ))
       )}
+    </div>
+    </div>
     </div>
   );
 }
